@@ -10,7 +10,7 @@ class App extends Component {
     }
   }
 
-  changeStarValueHandle = (value) => {
+  changeStarValue = (value) => {
     this.setState({
       starValue: value
     })
@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-          <Star value={this.state.starValue} size='30' animate='0.3' changeStarValue = {value => this.changeStarValueHandle(value)} />
+          <Star value={this.state.starValue} length='5' size='50' animate='0.3' onChange = {value => this.changeStarValue(value)} />
         </div>
       </div>
     );

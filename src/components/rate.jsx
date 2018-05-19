@@ -16,7 +16,7 @@ const hollowStyles = {
   width: 0,
   overflow: "hidden",
 }
-class Star extends React.PureComponent {
+class Rate extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
@@ -68,14 +68,14 @@ class Star extends React.PureComponent {
     return (
       <div style={this.styleFont}>
         {this.props.children}
-        <Flex style={{ height: `${parseInt(this.props.size)+2}px`, position: 'absolute', opacity: 0, zIndex: 9999 }}>
-          <Flex.Item style={{ height: `${parseInt(this.props.size)+2}px`, width: `${this.props.size / 2}px`}} key={1} onClick={() => this.props.onChange(0.5)}></Flex.Item>
+        <Flex style={{ height: `${parseInt(this.props.size) + 2}px`, position: 'absolute', opacity: 0, zIndex: 9999 }}>
+          <Flex.Item style={{ height: `${parseInt(this.props.size) + 2}px`, width: `${this.props.size / 2}px` }} key={1} onClick={() => this.props.onChange(0.5)}></Flex.Item>
           {
             this.state.nums.map((num) => (
-              <Flex.Item style={{ height: `${parseInt(this.props.size)+2}px`, width: `${this.props.size / 2 + 2.5}px`,  }} key={num * 2} onClick={() => this.props.onChange(num)}></Flex.Item>
+              <Flex.Item style={{ height: `${parseInt(this.props.size) + 2}px`, width: `${this.props.size / 2 + 2.5}px`, }} key={num * 2} onClick={() => this.props.onChange(num)}></Flex.Item>
             ))
           }
-          <Flex.Item style={{ height: `${parseInt(this.props.size)+2}px`, width: `${this.props.size / 2}px`, paddingRight: '2.5px' }} key={this.props.length * 2} onClick={() => this.props.onChange(this.props.length)}></Flex.Item>
+          <Flex.Item style={{ height: `${parseInt(this.props.size) + 2}px`, width: `${this.props.size / 2}px`, paddingRight: '2.5px' }} key={this.props.length * 2} onClick={() => this.props.onChange(this.props.length)}></Flex.Item>
         </Flex>
         <div style={rateStyles}>
           {this.state.hollow.map((v, i) => {
@@ -132,4 +132,4 @@ Star.propTypes = {
   readonly: PropTypes.bool,
   onChange: PropTypes.func,
 }
-export default Star
+export default Rate

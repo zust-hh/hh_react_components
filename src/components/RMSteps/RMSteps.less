@@ -1,0 +1,96 @@
+.am-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.rm-steps {
+  display: block;
+  box-sizing: border-box;
+  font-size: 0;
+  width: 100%;
+  line-height: 1.5;
+  position: relative;
+}
+
+.rm-steps-item {
+  position: relative;
+}
+
+.rm-steps-item-name {
+  float: left;
+  font-size: 14px;
+  color: #666;
+  line-height: 26px;
+  padding-right: 10px;
+  position: relative;
+  width: 70px;
+}
+
+.rm-steps-item-tail {
+  float: left;
+  position: absolute;
+  left: 80px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  padding: 30px 0 4px;
+}
+
+.rm-steps-item-tail::after {
+  height: 100%;
+  width: 1px;
+  background-color: #ddd;
+  content: "";
+  display: inline-block;
+  border-radius: 1px;
+  position: relative;
+  left: -2px;
+}
+
+.rm-steps-item:last-child .rm-steps-item-tail::after {
+  width: 0;
+}
+
+.rm-steps-item-icon {
+  float: left;
+  padding-top: 6px;
+  background: none;
+  border: 0;
+  line-height: 16px;
+  border-radius: 16px;
+  margin-right: 8px;
+}
+
+.rm-steps-icon {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.rm-steps-item-content {
+  min-height: 48px;
+  overflow: hidden;
+  display: block;
+  margin-top: 3px;
+}
+
+.rm-steps-item-title {
+  color: #333;
+  line-height: 26px;
+  font-size: 16px;
+  margin-bottom: 4px;
+  display: inline-block;
+  padding-right: 10px;
+  position: relative;
+}
+
+.rm-steps-description {
+  color: #666;
+  font-size: 12px;
+}
+
+.rm-steps-time {
+  color: #999;
+  padding-bottom: 12px;
+  font-size: 10px;
+}

@@ -1,0 +1,36 @@
+.rm-detail-item {
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+
+  &:last-child {
+    border: 0 !important;
+  }
+}
+
+.rm-detail-item::after {
+  display: block;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+.rm-detail-item-l {
+  width: 70px;
+  float: left;
+}
+
+.rm-detail-item-r {
+  margin-left: 70px;
+}
+
+.rm-detail-item-r p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hasLine {
+  border-bottom: 1px solid #eee;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
